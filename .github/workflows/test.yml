@@ -4,6 +4,14 @@ on:
   push:
     branches:
       - master
+on:
+  workflow_dispatch:
+    inputs:
+      cookies:
+        description: cookies
+        required: true
+        type: string
+        default: "your _U cookies"
 
 env:
   BING_U_COOKIE: ${{ secrets.BING_U_COOKIE }}
